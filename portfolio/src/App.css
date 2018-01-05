@@ -1,0 +1,30 @@
+body {
+  color: #5c5c5c;
+}
+.App {
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  max-width: 1000px;
+  margin: 15px auto;
+  padding: 50px;
+
+}
+
+.App a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(196,196,196,.6);
+}
+
+.header-links span:first-of-type {
+  margin-right: 10px;
+}
+
+a:hover {
+  color: #fd7777;
+}
