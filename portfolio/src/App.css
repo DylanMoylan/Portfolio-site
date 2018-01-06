@@ -28,3 +28,21 @@ header {
 a:hover {
   color: #fd7777;
 }
+
+.item-list li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #d3ffd3;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.item-list li:hover {
+  color: #fd7777;
+}
+
+.work {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
