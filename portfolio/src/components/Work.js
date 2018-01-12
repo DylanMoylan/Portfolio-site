@@ -8,7 +8,7 @@ class Work extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeWorkItem: 0,
+      activeWorkItem: props.activeItem ? props.activeItem : 0,
       workItems: textData.map((el) => {
         el.hoverState = false
         return el
@@ -25,8 +25,11 @@ class Work extends React.Component {
   }
 
   hoverListItem(status, index) {
+    status ? console.log('firing enter hoverListItem') : console.log('firing exit hoverListItem')
+    let newWorkItems = this.state.workItems
+    newWorkItems[index].hoverState = status
     this.setState({
-      workItems: this.state.workItems.fill(status, index, index)
+      workItems: newWorkItems
     })
   }
 
@@ -39,7 +42,7 @@ class Work extends React.Component {
             {
               this.state.workItems.map((el, index) => {
                 return <li
-                          key={el.id}
+                          key={el.name}
                           onClick={(event) => {this.alterActiveWorkItem(event, index)}}
                           onMouseEnter={(e)=> {this.hoverListItem(true, index)}}
                           onMouseLeave={(e)=> {this.hoverListItem(false, index)}}
@@ -48,7 +51,7 @@ class Work extends React.Component {
                           <div
                             className={ this.state.workItems[index].hoverState ? 'work-item-tooltip' : 'work-item-tooltip hidden' }
                           >
-                            {el.name}
+                            {el.summary}
                           </div>
                         </li>
               })
