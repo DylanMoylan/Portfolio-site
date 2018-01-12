@@ -10,7 +10,7 @@ const textData = [
       with jQuery and jQuery UI on the front-end and PHP on the server side.
       Features included infinite scrolling of search results, several inputs with
       autocomplete functionality, a history of prior searches, and a help/bug report chat system.`,
-    images: [],
+    images: ['Selectim_Mockup_EssaiGratuit.jpg','Selectim_Mockup_Home.jpg','Selectim_Mockup_LogIn.jpg'],
     liveLink: false
   },
   {
