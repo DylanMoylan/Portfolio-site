@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/87ea9562e2.css">
+  <style>
+    body, html {
+      margin: 0;
+    }
+    body {
+      font-family: 'arial'
+    }
+    h1 {
+      margin:0;
+      display: inline-block;
+      font-size: 1.8em;
+      letter-spacing: 3px;
+      font-weight: 100;
+    }
+
+    ul {
+      padding: 0;
+      display: inline-block;
+    }
+    li {
+      list-style: none;
+    }
+    .header {
+      background-color: #535f69;
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 1.5em
+    }
+
+    .brand-statement {
+      background-color: #84ba91;
+      color: white;
+      letter-spacing: 1px;
+      font-style: italic;
+      padding: 30px;
+      line-height: 24px;
+    }
+
+    .container {
+      padding: 50px 50px 0 50px;
+      margin: 0;
+    }
+
+    .container h3, .education h3 {
+      margin: 0;
+      border-bottom: 1px solid black;
+      font-weight: 500;
+    }
+
+    .professional-experience li {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .job-description {
+      color: #757575;
+    }
+
+    .professional-skills ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .professional-skills li {
+      padding: 15px;
+      margin: 10px;
+    }
+
+    .professional-skills li>div {
+      font-weight: bold;
+    }
+    .education {
+      background-color: #eaeaea;
+      padding: 15px 50px;
+    }
+    footer {
+      background-color:#84ba91;
+      text-align: center;
+      color:white;
+      padding: 10px;
+    }
+
+    footer span {
+      margin-right: 20px;
+    }
+
+    .header li {
+      display: inline-block;
+      font-size: small;
+      margin-right: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .projects li {
+      cursor: pointer;
+    }
+    .projects li:hover {
+      background-color: #eaeaea;
+    }
+    .hover-download {
+      position: fixed;
+      background-color: red;
+      color: white;
+      padding: 8px;
+      border-radius: 15px;
+      text-align: center;
+      top: 5%;
+      left: 94%;
+      font-size: 3em;
+      opacity: .3;
+    }
+    .hover-download:hover {
+      opacity: 1;
+    }
+    .hover-home {
+      display: block;
+      font-size: .7em;
+      margin-top: 10px;
+    }
+    .hover-download a:hover {
+      color: #545f68;
+    }
+  </style>
+</head>
+<body>
+  <div class="hover-download">
+    <a href="Dylan-Moylan-resume.pdf" title="click to download as PDF">
+      <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+    </a>
+    <div style="height: 4px; background-color: white; margin-top: 15px;"></div>
+    <a class="hover-home" href="/" title="Home">
+      <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+    </a>
+  </div>
+  <div class="header">
+    <div>
+      <h1>Dylan Moylan</h1>
+      <h3 style="margin: 0; font-weight: 100; letter-spacing: 2px;">Web Developer</h3>
+    </div>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/dylan-moylan"><span><i class="fa fa-linkedin-square" aria-hidden="true"></i>  LinkedIn: www.linkedin.com/in/dylan-moylan</span></a></li>
+      <li><i class="fa fa-address-card-o" aria-hidden="true"></i> NY, NY</li>
+      <li><i class="fa fa-envelope-o" aria-hidden="true"></i>  dylanmoylan1@gmail.com</li>
+      <li><i class="fa fa-phone" aria-hidden="true"></i>  917 202 4060</li>
+    </ul>
+  </div>
+  <div class="brand-statement">
+    Full Stack Web Developer aspiring to be on the frontiers of modern web development and responsive design. Driven by a passion for understanding patterns, structures, and the way things work, my background in philosophy informs my creative approach to engineering challenges.
+  </div>
+  <div class="container">
+    <div class="professional-skills">
+    <h3>Professional Skills</h3>
+    <ul>
+      <li><div>Javascript:</div> React.js, Node.js, Express, Passport(auth), Socket.io, jQuery, D3</li>
+      <li><div>Ruby:</div>Rails, Active-Record, Token-Auth, Sinatra</li>
+      <li><div>Domain-Specific:</div>SQL, Regular Expressions, Shell scripting, HTML5</li>
+      <li><div>Meta:</div>Git, preproduction (wireframing, whiteboarding, user-stories), test-driven development</li>
+      <li><div>Casual</div>PHP, Perl, Python, (French)</li>
+    </ul>
+  </div>
+    <div class="professional-experience">
+    <h3>Professional Experience</h3>
+    <ul>
+      <li>
+        <div class="job-card">
+          <div class="job-title">
+            <span>Web Development Immersive | Engineering Fellow, General Assembly</span>
+            <span>Dec. 2017</span>
+          </div>
+          <div class="job-description">
+            A 12 week, all day immersive course in web development. Students are challenged to sprint through 4 projects,
+            each demonstrating an understanding of a different aspect of the development process.
+            Students learn everything from abstract computer programming methodologies to the specifics of various programming languages and libraries.
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="job-card">
+          <div class="job-title">
+            <span>Assistant Web Developer, SELECTIM, New York City</span>
+            <span>2014-2017</span>
+          </div>
+          <div class="job-description">
+            Managed finances and legal paperwork and maintained the codebase of a small French real-estate search engine business.
+            Assisted in developing a dynamic, modernized front-end for the site to grow business into Portugal.
+            Began to teach myself Javascript and PHP on the job to adapt the code of the site's web crawlers to match patterns in Portuguese.
+            Found my passion for programming and the development process.
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="job-card">
+          <div class="job-title">
+            <span>Doorman, Carnegie Hill Place, New York City</span>
+            <span>2007-2009</span>
+          </div>
+          <div class="job-description">
+            Greeted guests and building residents, maintained building security, handled packages and dry cleaning and managed the building's tenant database and appointments for the manager. Performed light maintenance and upkeep of the building.
+
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="job-card">
+          <div class="job-title">
+            <span>Customer Service Representative, NYC Office of Labor Relations</span>
+            <span>2005-2007</span>
+          </div>
+          <div class="job-description">
+            Assisted callers as a representative for the City of New York's employee health benefits program.
+            Processed insurance benefit claims with several databases, composed letters and fielded phone calls as an assistant to the manager.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="projects">
+    <h3>Projects</h3>
+    <ul>
+      <li style="margin-bottom: 20px;">
+        <a href="/standup">
+          <div class="job-card">
+            <div class="job-title">
+              <span>Stand Up!</span>
+              <span>Dec. 2017</span>
+            </div>
+            <div class="job-description">
+              Created an app to allow professional or educational groups to graph how they feel about a project or process from day to day, and describe their daily wins and losses (derived from the General Assembly tradition of “Standups”) enabling visualizations of emotional progression over time. The app was written in Javascript, using React on the front-end (with D3, a data visualization library) and Node/Express on the back-end.
+            </div>
+          </div>
+        </a>
+      </li>
+      <li style="margin-bottom: 20px;">
+        <a href="/bigfish">
+          <div class="job-card">
+            <div class="job-title">
+              <span>Big Fish, Little Fish</span>
+              <span>Oct. 2017</span>
+            </div>
+            <div class="job-description">
+              Created a browser-based game in Javascript using the principles of Object Oriented Programming. The user is a fish, who must avoid larger predators and grow larger by preying on smaller fish.
+            </div>
+          </div>
+        </a>
+      </li>
+      <li style="margin-bottom: 20px;">
+        <div class="job-card">
+          <div class="job-title">
+            <span>Photo archive utility</span>
+            <span>Dec. 2017</span>
+          </div>
+          <div class="job-description">
+            Created as an exercise in Ruby/Rails development, the app allows users to upload photos and search through them according to user-specified criteria. Challenges included designing a complex relational database structure and learning to navigate Amazon Web Service's S3 file hosting API.
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  </div>
+  <div class="education">
+    <h3>Education</h3>
+    <ul style="width: 100%;">
+      <li style="margin-bottom: 20px">
+        <div class="job-card">
+          <div class="job-title">
+            <span>General Assembly, Web Development Immersive</span><span>Dec. 2017</span>
+          </div>
+          <div class="job-description">
+            Certificate
+          </div>
+        </div>
+      </li>
+      <li style="margin-bottom: 20px">
+        <div class="job-title">
+            <span>Queens College</span><span>May 2013</span>
+          </div>
+          <div class="job-description">
+            B.A, philosophy, minor in political science
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

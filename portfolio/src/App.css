@@ -23,11 +23,11 @@ header {
   padding-bottom: 10px;
 }
 
-.header-links span:first-of-type {
+.header-links span:not(last-of-type) {
   margin-right: 10px;
 }
 
-a:hover {
+a:not(.work-list-link):hover {
   color: #fd7777;
 }
 
@@ -64,9 +64,8 @@ a:hover {
   height: inherit;
 }
 
-.work-item div {
+.sep {
   text-align: left;
-  margin-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -80,7 +79,7 @@ a:hover {
   font-size: larger;
   font-family: 'arial';
 }
-.work-item img {
+.main-image {
   max-height: 300px;
   border: 3px solid #5c5c5c;
   padding: 5px;
@@ -97,25 +96,70 @@ a:hover {
 
 .work {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
 }
 
 .work-list {
   display: flex;
-  justify-content: space-between;
-  padding: 50px 0;
+  justify-content: center;
+  padding: 50px 50px;
   border-bottom: 1px solid rgba(196,196,196,.6);
+  flex-wrap: wrap;
 }
 .work-list-item {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 10px;
+}
+
+.work-list a:hover .work-list-cover {
+  opacity: .9;
+}
+
+.work-list-cover {
+  position: absolute;
+  margin:10px;
+  height: 150px;
+  padding-top: 150px;
+  width: 300px;
+  opacity: 0;
+  background-color: white;
 }
 
 .hidden {
   visibility: hidden;
+}
+
+.images-list {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images-list img {
+  height: 65px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.images-list i {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+a.work-list-link {
+  border: 1px solid rgba(196,196,196,.6);
+  margin: 0 10px 10px 10px;
+}
+
+.jumbo-scroll {
+  font-size: x-large;
+  padding: 15px;
 }

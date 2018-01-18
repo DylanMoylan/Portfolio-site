@@ -6,6 +6,7 @@ function Header(props) {
     <header>
       <div className="logo"><Link to="/">Dylan Moylan</Link></div>
       <div className="header-links">
+        <a href="resume.html"><span>Resume</span></a>
         <Link to="/"><span>Work</span></Link>
         <Link to="/about"><span>About</span></Link>
       </div>

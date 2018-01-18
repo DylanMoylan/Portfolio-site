@@ -1,21 +1,31 @@
 import React from 'react'
 import WorkItem from './WorkItem'
 import textData from '../assets/text-data.js'
+import { Link } from 'react-router-dom'
 
-// import FocusGroupsApp from '../assets/focus-group-icon.png'
+/*<div className="item-list">
+    {
+      this.state.workItems.map((el, index) => {
+        return <Link className="work-list-link" key={index} to={`/${el.id}`}>
+                <div className="work-list-cover"><div style={{margin:'0 20px'}}>{el.coverName}</div></div>
+                <div
+                  className="work-list-item"
+                  style={{backgroundImage: 'url(' + el.icon + ')'}}
+                >
+                </div>
+              </Link>
+      })
+    }
+</div>*/
 
 class Work extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       activeWorkItem: props.activeItem ? props.activeItem : 0,
-      workItems: textData.map((el) => {
-        el.hoverState = false
-        return el
-      })
+      workItems: textData
     }
     this.alterActiveWorkItem = this.alterActiveWorkItem.bind(this)
-    this.hoverListItem = this.hoverListItem.bind(this)
   }
 
   alterActiveWorkItem(event, index) {
@@ -24,40 +34,14 @@ class Work extends React.Component {
     })
   }
 
-  hoverListItem(status, index) {
-    status ? console.log('firing enter hoverListItem') : console.log('firing exit hoverListItem')
-    let newWorkItems = this.state.workItems
-    newWorkItems[index].hoverState = status
-    this.setState({
-      workItems: newWorkItems
-    })
-  }
-
   render() {
+    let next = this.state.activeWorkItem === this.state.workItems.length - 1 ? 0 : this.state.activeWorkItem + 1
+    let prev = this.state.activeWorkItem === 0 ? this.state.workItems.length - 1 : this.state.activeWorkItem - 1
     return (
       <div className="work">
-        <WorkItem item={this.state.workItems[this.state.activeWorkItem]} />
-        <div className="item-list">
-          <ul>
-            {
-              this.state.workItems.map((el, index) => {
-                return <li
-                          key={el.name}
-                          onClick={(event) => {this.alterActiveWorkItem(event, index)}}
-                          onMouseEnter={(e)=> {this.hoverListItem(true, index)}}
-                          onMouseLeave={(e)=> {this.hoverListItem(false, index)}}
-                          style={{backgroundImage: 'url(' + el.icon + ')'}}
-                        >
-                          <div
-                            className={ this.state.workItems[index].hoverState ? 'work-item-tooltip' : 'work-item-tooltip hidden' }
-                          >
-                            {el.summary}
-                          </div>
-                        </li>
-              })
-            }
-          </ul>
-        </div>
+        <Link className="jumbo-scroll" to={this.state.workItems[prev].id}><i className="fa fa-chevron-left" aria-hidden="true"></i></Link>
+          <WorkItem item={this.state.workItems[this.state.activeWorkItem]} />
+        <Link className="jumbo-scroll" to={this.state.workItems[next].id}><i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
       </div>
     )
   }

@@ -1,6 +1,7 @@
 const textData = [
   {
     id:'selectim',
+    coverName: 'Selectim - UI revamp',
     name: 'SELECTIM UI',
     github: 'https://github.com/dylonion/Selectim',
     icon: 'selectim-ui.png',
@@ -10,11 +11,12 @@ const textData = [
       with jQuery and jQuery UI on the front-end and PHP on the server side.
       Features included infinite scrolling of search results, several inputs with
       autocomplete functionality, a history of prior searches, and a help/bug report chat system.`,
-    images: ['Selectim_Mockup_EssaiGratuit.jpg','Selectim_Mockup_Home.jpg','Selectim_Mockup_LogIn.jpg'],
+    images: ['Selectim_Mockup_EssaiGratuit.jpg','Selectim_Mockup_Home.jpg','Selectim_Mockup_LogIn.jpg','selectim-ui.png'],
     liveLink: false
   },
   {
     id:'standup',
+    coverName: 'General Assembly - Live Morale Tracker',
     name: 'Standup!',
     github: 'https://github.com/dylonion/Standups',
     icon: 'focus-group-icon.png',
@@ -25,11 +27,11 @@ const textData = [
       their daily wins and losses (derived from the General Assembly tradition of “Standups”)
       enabling visualizations of emotional progression over time. The app was written in Javascript,
       using React on the front-end (with D3, a data visualization library) and Node/Express on the back-end.`,
-    images: [],
     liveLink: false
   },
   {
     id:'focusgroup',
+    coverName: 'General Assembly - Focus Group Organizer',
     name: 'Focus Groups App',
     github: 'https://github.com/OldLace/Focus-Group',
     icon: 'focus-group-icon.png',
@@ -44,11 +46,11 @@ const textData = [
       generate SQL seeds populated with fake users for testing purposes.
       On the frontend, I was involved with implementing complex forms
       and the conditional rendering of a dual-facing app.`,
-    images: [],
     liveLink: false
   },
   {
     id:'bigfish',
+    coverName: 'General Assembly - Javascript Browser Game',
     name: 'Big Fish, Little Fish',
     github: null,
     icon: 'big-fish-game.png',
@@ -57,7 +59,6 @@ const textData = [
       A browser­ based game in Javascript using the principles
       of Object Oriented Programming. The user is a fish, who
       must avoid larger predators and grow larger by preying on smaller fish.`,
-    images: [],
     liveLink: false
   }
 ]
