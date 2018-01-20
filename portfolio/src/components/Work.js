@@ -39,9 +39,9 @@ class Work extends React.Component {
     let prev = this.state.activeWorkItem === 0 ? this.state.workItems.length - 1 : this.state.activeWorkItem - 1
     return (
       <div className="work">
-        <Link className="jumbo-scroll" to={this.state.workItems[prev].id}><i className="fa fa-chevron-left" aria-hidden="true"></i></Link>
+        <Link className="jumbo-scroll" to={this.state.workItems[prev].id}><i className="fa fa-chevron-left" aria-hidden="true"></i>{this.state.workItems[prev].name}</Link>
           <WorkItem item={this.state.workItems[this.state.activeWorkItem]} />
-        <Link className="jumbo-scroll" to={this.state.workItems[next].id}><i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
+        <Link className="jumbo-scroll" to={this.state.workItems[next].id}>{this.state.workItems[next].name}<i className="fa fa-chevron-right" aria-hidden="true"></i></Link>
       </div>
     )
   }

@@ -19,14 +19,6 @@ class WorkItem extends React.Component {
     return (
       <div className="work-item">
         <div className="sep">
-          <h3>{this.props.item.name}</h3>
-          <p>{this.props.item.description}</p>
-          <div className="work-item-links">
-            <a href={this.props.item.github}><i className="fa fa-github" aria-hidden="true"></i>Github</a>
-            {this.props.item.liveLink ? <a href={this.props.item.liveLink}><i className="fa fa-play" aria-hidden="true"></i>View Project</a> : ''}
-          </div>
-        </div>
-        <div className="sep">
           <img
             alt={this.props.item.name}
             src={this.props.item.images ? this.props.item.images[this.state.activeImage] : this.props.item.icon}
@@ -54,6 +46,14 @@ class WorkItem extends React.Component {
                 </div>
               ) : ''
             }
+        </div>
+        <div className="sep">
+          <h3>{this.props.item.name}</h3>
+          <p>{this.props.item.description}</p>
+          <div className="work-item-links">
+            <a href={this.props.item.github}><i className="fa fa-github" aria-hidden="true"></i>Github</a>
+            {this.props.item.liveLink ? <a href={this.props.item.liveLink}><i className="fa fa-play" aria-hidden="true"></i>View Project</a> : ''}
+          </div>
         </div>
       </div>
     )

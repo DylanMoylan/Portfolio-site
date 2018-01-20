@@ -49,10 +49,6 @@ a:not(.work-list-link):hover {
   align-items: center;
 }
 
-.work {
-  margin-top: 50px;
-}
-
 .item-list li:hover {
   background-blend-mode: darken;
 }
@@ -62,6 +58,7 @@ a:not(.work-list-link):hover {
   justify-content: space-around;
   width: 100%;
   height: inherit;
+  flex-direction: column;
 }
 
 .sep {
@@ -69,9 +66,15 @@ a:not(.work-list-link):hover {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #dcffca;
-  padding: 20px;
-  border-radius: 3px;
+  font-size: .8em;
+  line-height: normal;
+  margin-top: 20px;
+}
+
+.sep:first-of-type {
+  align-items: center;
+  border: 1px solid rgba(196,196,196,.6);
+
 }
 
 .work-item div h3 {
@@ -79,11 +82,16 @@ a:not(.work-list-link):hover {
   font-size: larger;
   font-family: 'arial';
 }
-.main-image {
+/*.main-image {
   max-height: 300px;
   border: 3px solid #5c5c5c;
   padding: 5px;
   border-radius: 3px;
+}*/
+
+.main-image {
+  max-width: 600px;
+  max-height: 280px;
 }
 
 .work-item-tooltip {
@@ -98,6 +106,7 @@ a:not(.work-list-link):hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 50px;
 }
 
 .work-list {
